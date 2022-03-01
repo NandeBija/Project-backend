@@ -1,4 +1,4 @@
-GET http://localhost:2000/users
+GET http://localhost:2080/users
 Content-Type: application/json
 
 ###
@@ -12,7 +12,7 @@ Content-Type: application/json
     "password":"seth"
 }
 ###
-PATCH  http://localhost:2000/users/login 
+PATCH  http://localhost:2080/users/login 
 Content-Type: application/json
 
 {
@@ -22,11 +22,11 @@ Content-Type: application/json
 
 
 ###
-DELETE http://localhost:3090/users
+DELETE http://localhost:2080/users/621cabfe5346cfe308947f37
 Content-Type: application/json
 
 ###
-GET http://localhost:2080/cart
+GET http://localhost:2080/products
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI2MjE4ZDhjNDIxNDhhNTYyYzA1YzY0NGUiLCJuYW1lIjoiTkFOREUiLCJlbWFpbCI6Ik5BTkRFQGdtYWlsLmNvbSIsImNvbnRhY3QiOiIwODI0NzI1MzYiLCJwYXNzd29yZCI6IiQyYiQxMCRnUy5OeVZ1TjhFbGRNcUxjTDd2Z0N1WjlKb2ZNcDJKR3hKWWpjcWRKa1ZhZ3hjeEtOUzdNaSIsImF2YXRhciI6bnVsbCwiYWJvdXQiOm51bGwsImpvaW5EYXRlIjoiMjAyMi0wMi0yNVQxMzoyNToyNC4zNDVaIiwiX192IjowfQ.11wfKMMu-oOLMWy6YoEqD0V8DOZpnit7Y8zvPio710s
 
 
@@ -66,3 +66,24 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI2MjE4ZDhjNDIxNDhhNTYyYzA1Y
     "author":"Nande",
     "about":"sweat pants"
 }
+
+###
+
+POST http://localhost:2080/users/cart
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI2MjE4ZDhjNDIxNDhhNTYyYzA1YzY0NGUiLCJuYW1lIjoiTkFOREUiLCJlbWFpbCI6Ik5BTkRFQGdtYWlsLmNvbSIsImNvbnRhY3QiOiIwODI0NzI1MzYiLCJwYXNzd29yZCI6IiQyYiQxMCRnUy5OeVZ1TjhFbGRNcUxjTDd2Z0N1WjlKb2ZNcDJKR3hKWWpjcWRKa1ZhZ3hjeEtOUzdNaSIsImF2YXRhciI6bnVsbCwiYWJvdXQiOm51bGwsImpvaW5EYXRlIjoiMjAyMi0wMi0yNVQxMzoyNToyNC4zNDVaIiwiX192IjowfQ.11wfKMMu-oOLMWy6YoEqD0V8DOZpnit7Y8zvPio710s
+
+{
+    "productId": 2,
+    "quantity": 1,
+    "name": "product 1",
+    "price": 11,
+    "about":"This is a new tiem...please add!",
+    "image":"img url"
+}
+
+###
+
+GET http://localhost:2080/users/621e23d4800c0f1f20f34d13/cart
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI2MjE4ZDhjNDIxNDhhNTYyYzA1YzY0NGUiLCJuYW1lIjoiTkFOREUiLCJlbWFpbCI6Ik5BTkRFQGdtYWlsLmNvbSIsImNvbnRhY3QiOiIwODI0NzI1MzYiLCJwYXNzd29yZCI6IiQyYiQxMCRnUy5OeVZ1TjhFbGRNcUxjTDd2Z0N1WjlKb2ZNcDJKR3hKWWpjcWRKa1ZhZ3hjeEtOUzdNaSIsImF2YXRhciI6bnVsbCwiYWJvdXQiOm51bGwsImpvaW5EYXRlIjoiMjAyMi0wMi0yNVQxMzoyNToyNC4zNDVaIiwiX192IjowfQ.11wfKMMu-oOLMWy6YoEqD0V8DOZpnit7Y8zvPio710s
