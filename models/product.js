@@ -1,11 +1,11 @@
 const mongoose = require("mongoose");
 
 const productSchema = new mongoose.Schema({
-  productNumber:{
+  productNumber: {
     type: Number,
-     required: true,
-     unique: true
-    },
+    required: true,
+    unique: true,
+  },
   name: {
     type: String,
     required: true,
@@ -14,19 +14,19 @@ const productSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  author:{
+  author: {
     type: String,
-    required: true
+    required: true,
   },
-  
+
   img: {
     type: String,
     required: false,
     default: "https://picsum.photos/1920",
   },
-  price:{
-      type: String,
-      required: true
+  price: {
+    type: Number,
+    required: true,
   },
   date: {
     type: Date,
