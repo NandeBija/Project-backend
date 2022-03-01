@@ -162,5 +162,6 @@ router.post("/cart", async (req, res) => {
     console.log(err);
     res.status(500).send("Something went wrong");
   }
+  res.send("Product added to cart");
 });
 module.exports = router;
