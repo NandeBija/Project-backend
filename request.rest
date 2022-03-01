@@ -1,0 +1,68 @@
+GET http://localhost:2000/users
+Content-Type: application/json
+
+###
+POST http://localhost:2000/users
+Content-Type: application/json
+
+{
+    "name":"seth",
+    "email":"seth@gmail.com",
+    "contact":"08247253dkj875976",
+    "password":"seth"
+}
+###
+PATCH  http://localhost:2000/users/login 
+Content-Type: application/json
+
+{
+    "email":"NANDE@gmail.com",
+    "password":"IDK"
+}
+
+
+###
+DELETE http://localhost:3090/users
+Content-Type: application/json
+
+###
+GET http://localhost:2080/cart
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI2MjE4ZDhjNDIxNDhhNTYyYzA1YzY0NGUiLCJuYW1lIjoiTkFOREUiLCJlbWFpbCI6Ik5BTkRFQGdtYWlsLmNvbSIsImNvbnRhY3QiOiIwODI0NzI1MzYiLCJwYXNzd29yZCI6IiQyYiQxMCRnUy5OeVZ1TjhFbGRNcUxjTDd2Z0N1WjlKb2ZNcDJKR3hKWWpjcWRKa1ZhZ3hjeEtOUzdNaSIsImF2YXRhciI6bnVsbCwiYWJvdXQiOm51bGwsImpvaW5EYXRlIjoiMjAyMi0wMi0yNVQxMzoyNToyNC4zNDVaIiwiX192IjowfQ.11wfKMMu-oOLMWy6YoEqD0V8DOZpnit7Y8zvPio710s
+
+
+###
+DELETE http://localhost:2000/products
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI2MjE4ZDhjNDIxNDhhNTYyYzA1YzY0NGUiLCJuYW1lIjoiTkFOREUiLCJlbWFpbCI6Ik5BTkRFQGdtYWlsLmNvbSIsImNvbnRhY3QiOiIwODI0NzI1MzYiLCJwYXNzd29yZCI6IiQyYiQxMCRnUy5OeVZ1TjhFbGRNcUxjTDd2Z0N1WjlKb2ZNcDJKR3hKWWpjcWRKa1ZhZ3hjeEtOUzdNaSIsImF2YXRhciI6bnVsbCwiYWJvdXQiOm51bGwsImpvaW5EYXRlIjoiMjAyMi0wMi0yNVQxMzoyNToyNC4zNDVaIiwiX192IjowfQ.11wfKMMu-oOLMWy6YoEqD0V8DOZpnit7Y8zvPio710s
+
+{   "productNumber":1,
+    "name":"NIKE",
+    "image":"img url",
+    "price":"R300",
+    "author":"Nande",
+    "about":"sweat pants"
+    
+}
+
+###
+PUT http://localhost:2000/products/621c923a488fb8510ae3b034
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI2MjE4ZDhjNDIxNDhhNTYyYzA1YzY0NGUiLCJuYW1lIjoiTkFOREUiLCJlbWFpbCI6Ik5BTkRFQGdtYWlsLmNvbSIsImNvbnRhY3QiOiIwODI0NzI1MzYiLCJwYXNzd29yZCI6IiQyYiQxMCRnUy5OeVZ1TjhFbGRNcUxjTDd2Z0N1WjlKb2ZNcDJKR3hKWWpjcWRKa1ZhZ3hjeEtOUzdNaSIsImF2YXRhciI6bnVsbCwiYWJvdXQiOm51bGwsImpvaW5EYXRlIjoiMjAyMi0wMi0yNVQxMzoyNToyNC4zNDVaIiwiX192IjowfQ.11wfKMMu-oOLMWy6YoEqD0V8DOZpnit7Y8zvPio710s
+
+{
+    "name":"ADIDAS",
+    "image":"img url",
+    "price":"R300",
+    "about":"sweat pants"
+}
+
+###
+DELETE http://localhost:2000/products/621ca6c30f2ec08593587d95
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI2MjE4ZDhjNDIxNDhhNTYyYzA1YzY0NGUiLCJuYW1lIjoiTkFOREUiLCJlbWFpbCI6Ik5BTkRFQGdtYWlsLmNvbSIsImNvbnRhY3QiOiIwODI0NzI1MzYiLCJwYXNzd29yZCI6IiQyYiQxMCRnUy5OeVZ1TjhFbGRNcUxjTDd2Z0N1WjlKb2ZNcDJKR3hKWWpjcWRKa1ZhZ3hjeEtOUzdNaSIsImF2YXRhciI6bnVsbCwiYWJvdXQiOm51bGwsImpvaW5EYXRlIjoiMjAyMi0wMi0yNVQxMzoyNToyNC4zNDVaIiwiX192IjowfQ.11wfKMMu-oOLMWy6YoEqD0V8DOZpnit7Y8zvPio710s
+{
+    "name":"NIKE",
+    "image":"img url",
+    "price":"R300",
+    "author":"Nande",
+    "about":"sweat pants"
+}
