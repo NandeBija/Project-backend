@@ -12,7 +12,7 @@ const userSchema = new mongoose.Schema({
   },
   contact: {
     type: String,
-    required: true,
+    required: false,
   },
   password: {
     type: String,
@@ -30,13 +30,13 @@ const userSchema = new mongoose.Schema({
   },
   joinDate: {
     type: Date,
-    required: true,
+    required: false,
     default: Date.now,
   },
-  // cart:{
-  //   try: Array,
-  //   default:null
-  // }
+  cart: {
+    try: Array,
+    default: [],
+  },
 });
 
 module.exports = mongoose.model("User", userSchema);

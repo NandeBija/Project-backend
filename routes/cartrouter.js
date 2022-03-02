@@ -8,8 +8,8 @@ const router = express.Router();
 
 // GET ITEMS IN CART
 
-// router.get("/:id", getCart, (req, res, next) => {
-//   return res.send(res.user);
+// router.get("/cart", getCart, (req, res, next) => {
+//   return res.send('wat');
 //   });
 
 //   UPDATE CART
@@ -87,6 +87,11 @@ const router = express.Router();
 //   }
 // );
 
+router.get('/', (req,res)=>{
+  
+})
+
+
 router.post("/cart", async (req, res) => {
   const { productId, quantity, name, price, about, image } = req.body;
 
@@ -124,4 +129,6 @@ router.post("/cart", async (req, res) => {
     res.status(500).send("Something went wrong");
   }
 });
+
+
 module.exports = router;

@@ -5,7 +5,7 @@ const User = require("../models/user");
 const Cart = require("../models/cart");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-const { getUser } = require("../middleware/find");
+const { getUser, getProduct } = require("../middleware/find");
 const authenticateToken = require("../middleware/authenticate");
 const authenticate = require("../middleware/authenticate");
 const { application } = require("express");
@@ -115,15 +115,6 @@ router.patch("/login", async (req, res, next) => {
   }
 });
 
-//GET ITEMS FROM CART
-router.get("/:id/cart", authenticateToken, async (req, res, next) => {
-  try {
-    res.json(req.user.cart);
-  } catch (error) {
-    res.status(500).json({ msg: error });
-  }
-});
-
 //POST ITEM IN CART
 
 router.post("/cart", async (req, res) => {
@@ -133,6 +124,7 @@ router.post("/cart", async (req, res) => {
 
   try {
     var cart = await Cart.findOne({ userId });
+    console.log(cart);
 
     if (cart) {
       //cart exists for user
@@ -164,4 +156,48 @@ router.post("/cart", async (req, res) => {
   }
   res.send("Product added to cart");
 });
+
+// GET PRODUCT FROM CART
+
+router.get("/cart/:id", async (req, res) => {
+  try {
+    // res.json(req.user.cart);
+    console.log(res);
+  } catch (error) {
+    res.status(500).json({ msg: error });
+  }
+});
+
+//POST PRODUCT TO USER CART
+// router.post("/:id/cart", [authenticate, getProduct],async (req, res, next) => {
+//   console.log('We here now')
+//   console.log(req.user)
+//   // const user = await User.findById(req.user._id);
+
+//   console.log(user)
+//   let product_id = res.product._id;
+//   let name = res.product.name;
+//   let about = res.product.about;
+//   let author = res.product.author;
+//   let img = res.product.img;
+//   let price = res.product.price;
+//   let created_by = req.user._id;
+
+//   try {
+//     user.cart.push({
+//       product_id,
+//       name,
+//       about,
+//       author,
+//       img,
+//       price,
+//       created_by,
+//     });
+//     const updatedUser = await user.save();
+//     res.status(201).json(updatedUser.cart);
+//   } catch (error) {
+//     res.status(500).json(console.log(error));
+//   }
+// });
+
 module.exports = router;

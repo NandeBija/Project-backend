@@ -2,14 +2,14 @@ GET http://localhost:2080/users
 Content-Type: application/json
 
 ###
-POST http://localhost:2000/users
+POST http://localhost:2080/users
 Content-Type: application/json
 
 {
-    "name":"seth",
-    "email":"seth@gmail.com",
-    "contact":"08247253dkj875976",
-    "password":"seth"
+    "name":"seJAMMYth",
+    "email":"JAMMY@gmail.com",
+    "contact":"JAMMY6",
+    "password":"JAM"
 }
 ###
 PATCH  http://localhost:2080/users/login 
@@ -71,19 +71,25 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI2MjE4ZDhjNDIxNDhhNTYyYzA1Y
 
 POST http://localhost:2080/users/cart
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI2MjE4ZDhjNDIxNDhhNTYyYzA1YzY0NGUiLCJuYW1lIjoiTkFOREUiLCJlbWFpbCI6Ik5BTkRFQGdtYWlsLmNvbSIsImNvbnRhY3QiOiIwODI0NzI1MzYiLCJwYXNzd29yZCI6IiQyYiQxMCRnUy5OeVZ1TjhFbGRNcUxjTDd2Z0N1WjlKb2ZNcDJKR3hKWWpjcWRKa1ZhZ3hjeEtOUzdNaSIsImF2YXRhciI6bnVsbCwiYWJvdXQiOm51bGwsImpvaW5EYXRlIjoiMjAyMi0wMi0yNVQxMzoyNToyNC4zNDVaIiwiX192IjowfQ.11wfKMMu-oOLMWy6YoEqD0V8DOZpnit7Y8zvPio710s
+# Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI2MjE4ZDhjNDIxNDhhNTYyYzA1YzY0NGUiLCJuYW1lIjoiTkFOREUiLCJlbWFpbCI6Ik5BTkRFQGdtYWlsLmNvbSIsImNvbnRhY3QiOiIwODI0NzI1MzYiLCJwYXNzd29yZCI6IiQyYiQxMCRnUy5OeVZ1TjhFbGRNcUxjTDd2Z0N1WjlKb2ZNcDJKR3hKWWpjcWRKa1ZhZ3hjeEtOUzdNaSIsImF2YXRhciI6bnVsbCwiYWJvdXQiOm51bGwsImpvaW5EYXRlIjoiMjAyMi0wMi0yNVQxMzoyNToyNC4zNDVaIiwiX192IjowfQ.11wfKMMu-oOLMWy6YoEqD0V8DOZpnit7Y8zvPio710s
 
 {
-    "productId": 7,
-    "quantity": 1,
-    "name": "product 1",
+    "productId": 98,
+    "quantity": 11,
+    "name": "product 11",
     "price": 11,
-    "about":"This is a new tiem...please add!",
+    "about":"lol",
     "image":"img url"
 }
 
 ###
 
-GET http://localhost:2080/users/cart
+GET http://localhost:2080/cart
 Content-Type: application/json
-Authorization: Bearer 621e23d4800c0f1f20f34d13
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI2MjE4ZDhjNDIxNDhhNTYyYzA1YzY0NGUiLCJuYW1lIjoiTkFOREUiLCJlbWFpbCI6Ik5BTkRFQGdtYWlsLmNvbSIsImNvbnRhY3QiOiIwODI0NzI1MzYiLCJwYXNzd29yZCI6IiQyYiQxMCRnUy5OeVZ1TjhFbGRNcUxjTDd2Z0N1WjlKb2ZNcDJKR3hKWWpjcWRKa1ZhZ3hjeEtOUzdNaSIsImF2YXRhciI6bnVsbCwiYWJvdXQiOm51bGwsImpvaW5EYXRlIjoiMjAyMi0wMi0yNVQxMzoyNToyNC4zNDVaIiwiX192IjowfQ.11wfKMMu-oOLMWy6YoEqD0V8DOZpnit7Y8zvPio710s
+
+###
+GET http://localhost:2080/users/cart/621e23d4800c0f1f20f34d13
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI2MjE4ZDhjNDIxNDhhNTYyYzA1YzY0NGUiLCJuYW1lIjoiTkFOREUiLCJlbWFpbCI6Ik5BTkRFQGdtYWlsLmNvbSIsImNvbnRhY3QiOiIwODI0NzI1MzYiLCJwYXNzd29yZCI6IiQyYiQxMCRnUy5OeVZ1TjhFbGRNcUxjTDd2Z0N1WjlKb2ZNcDJKR3hKWWpjcWRKa1ZhZ3hjeEtOUzdNaSIsImF2YXRhciI6bnVsbCwiYWJvdXQiOm51bGwsImpvaW5EYXRlIjoiMjAyMi0wMi0yNVQxMzoyNToyNC4zNDVaIiwiX192IjowfQ.11wfKMMu-oOLMWy6YoEqD0V8DOZpnit7Y8zvPio710s
+

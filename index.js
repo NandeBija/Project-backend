@@ -157,6 +157,10 @@ app.get("/", (req, res, next) => {
   });
 });
 
+app.get("/", (req, res, next) => {
+  res.locals.cartrouter = req.session.cartrouter;
+  next();
+});
 app.listen(app.get("port"), (server) => {
   console.info(`Server listen on port ${app.get("port")}`);
   console.info("Press CTRL + C to close the server");
