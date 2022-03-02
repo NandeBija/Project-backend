@@ -74,7 +74,7 @@ app.get("/", (req, res, next) => {
           contact: "String",
           password: "String",
           avatar: "String",
-          img: "String *optional* (Must be hosted image. I can suggest to host on Post Image)",
+          img: "String *optional* (Must be hosted image)",
         },
         route: "/users/:id",
         result: {
@@ -110,39 +110,45 @@ app.get("/", (req, res, next) => {
           post: "Object",
         },
       },
-      create_post: {
+      create_product: {
         method: "POST",
-        route: "/posts/",
+        route: "/products/",
         headers: {
           authorization: "Bearer (JWT token)",
         },
         request_body: {
-          title: "String",
-          body: "String",
-          img: "String *optional* (Must be hosted image. I can suggest to host on Post Image)",
+          productNUmber: "String",
+          name: "String",
+          about: "String",
+          author: "String",
+          img: "String *optional* (Must be hosted image)",
+          price: "Number",
         },
         result: {
-          post: "Object",
+          product: "Object",
         },
       },
-      update_post: {
+      update_product: {
         method: "PUT",
-        route: "/posts/:id",
+        route: "/products/:id",
         headers: {
           authorization: "Bearer (JWT token)",
         },
         request_body: {
-          title: "String *optional*",
-          body: "String *optional*",
-          img: "String *optional* (Must be hosted image. I can suggest to host on Post Image)",
+          productNUmber: "String",
+          name: "String",
+          about: "String",
+          author: "String",
+          img: "String *optional* (Must be hosted image)",
+          price: "Number",
         },
         result: {
-          post: "Object",
+          product: "Object",
         },
       },
-      delete_post: {
+      delete_product: {
         method: "DELETE",
-        route: "/posts/:id",
+        route: "/products/:id",
         result: {
           message: "Object",
         },
