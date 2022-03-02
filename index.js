@@ -89,25 +89,25 @@ app.get("/", (req, res, next) => {
         },
       },
     },
-    post_routes: {
-      all_posts: {
+    product_routes: {
+      all_products: {
         method: "GET",
-        route: "/posts",
+        route: "/products",
         headers: {
           authorization: "Bearer (JWT token)",
         },
         result: {
-          posts: "Array",
+          products: "Array",
         },
       },
-      single_post: {
+      single_product: {
         method: "GET",
-        route: "/posts/:id",
+        route: "/products/:id",
         headers: {
           authorization: "Bearer (JWT token)",
         },
         result: {
-          post: "Object",
+          product: "Object",
         },
       },
       create_product: {
