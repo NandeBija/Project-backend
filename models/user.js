@@ -33,10 +33,10 @@ const userSchema = new mongoose.Schema({
     required: false,
     default: Date.now,
   },
-  cart: {
-    try: Array,
-    default: [],
-  },
+  // cart: {
+  //   try: Array,
+  //   default: [],
+  // },
 });
 
 module.exports = mongoose.model("User", userSchema);
