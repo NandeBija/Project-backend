@@ -31,41 +31,41 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI2MjE4ZDhjNDIxNDhhNTYyYzA1Y
 
 
 ###
-DELETE http://localhost:2000/products
+POST http://localhost:2080/products
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI2MjE4ZDhjNDIxNDhhNTYyYzA1YzY0NGUiLCJuYW1lIjoiTkFOREUiLCJlbWFpbCI6Ik5BTkRFQGdtYWlsLmNvbSIsImNvbnRhY3QiOiIwODI0NzI1MzYiLCJwYXNzd29yZCI6IiQyYiQxMCRnUy5OeVZ1TjhFbGRNcUxjTDd2Z0N1WjlKb2ZNcDJKR3hKWWpjcWRKa1ZhZ3hjeEtOUzdNaSIsImF2YXRhciI6bnVsbCwiYWJvdXQiOm51bGwsImpvaW5EYXRlIjoiMjAyMi0wMi0yNVQxMzoyNToyNC4zNDVaIiwiX192IjowfQ.11wfKMMu-oOLMWy6YoEqD0V8DOZpnit7Y8zvPio710s
 
-{   "productNumber":1,
+{   
     "name":"NIKE",
     "image":"img url",
-    "price":"R300",
-    "author":"Nande",
-    "about":"sweat pants"
+    "price":300,
+    "category":"sweat pants"
     
 }
 
 ###
-PUT http://localhost:2000/products/621c923a488fb8510ae3b034
+PUT http://localhost:2080/products/621c99d334f57c700771098f
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI2MjE4ZDhjNDIxNDhhNTYyYzA1YzY0NGUiLCJuYW1lIjoiTkFOREUiLCJlbWFpbCI6Ik5BTkRFQGdtYWlsLmNvbSIsImNvbnRhY3QiOiIwODI0NzI1MzYiLCJwYXNzd29yZCI6IiQyYiQxMCRnUy5OeVZ1TjhFbGRNcUxjTDd2Z0N1WjlKb2ZNcDJKR3hKWWpjcWRKa1ZhZ3hjeEtOUzdNaSIsImF2YXRhciI6bnVsbCwiYWJvdXQiOm51bGwsImpvaW5EYXRlIjoiMjAyMi0wMi0yNVQxMzoyNToyNC4zNDVaIiwiX192IjowfQ.11wfKMMu-oOLMWy6YoEqD0V8DOZpnit7Y8zvPio710s
 
 {
-    "name":"ADIDAS",
+    "name":"PUMA",
     "image":"img url",
     "price":"R300",
-    "about":"sweat pants"
+    "about":"haha pants",
+    "author": "Nande"
 }
 
 ###
-DELETE http://localhost:2000/products/621ca6c30f2ec08593587d95
+DELETE http://localhost:2080/products/621c923d488fb8510ae3b036
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI2MjE4ZDhjNDIxNDhhNTYyYzA1YzY0NGUiLCJuYW1lIjoiTkFOREUiLCJlbWFpbCI6Ik5BTkRFQGdtYWlsLmNvbSIsImNvbnRhY3QiOiIwODI0NzI1MzYiLCJwYXNzd29yZCI6IiQyYiQxMCRnUy5OeVZ1TjhFbGRNcUxjTDd2Z0N1WjlKb2ZNcDJKR3hKWWpjcWRKa1ZhZ3hjeEtOUzdNaSIsImF2YXRhciI6bnVsbCwiYWJvdXQiOm51bGwsImpvaW5EYXRlIjoiMjAyMi0wMi0yNVQxMzoyNToyNC4zNDVaIiwiX192IjowfQ.11wfKMMu-oOLMWy6YoEqD0V8DOZpnit7Y8zvPio710s
-{
-    "name":"NIKE",
-    "image":"img url",
-    "price":"R300",
-    "author":"Nande",
-    "about":"sweat pants"
-}
+# {
+#     "name":"NIKE",
+#     "image":"img url",
+#     "price":"R300",
+#     "author":"Nande",
+#     "about":"sweat pants"
+# }
 
 ###
 

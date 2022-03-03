@@ -157,17 +157,6 @@ router.post("/cart", async (req, res) => {
   res.send("Product added to cart");
 });
 
-// GET PRODUCT FROM CART
-
-router.get("/cart/:id", async (req, res) => {
-  try {
-    // res.json(req.user.cart);
-    console.log(res);
-  } catch (error) {
-    res.status(500).json({ msg: error });
-  }
-});
-
 //POST PRODUCT TO USER CART
 // router.post("/:id/cart", [authenticate, getProduct],async (req, res, next) => {
 //   console.log('We here now')

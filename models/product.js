@@ -19,10 +19,14 @@ const productSchema = new mongoose.Schema({
   },
   author: {
     type: String,
-    required: true,
+    required: false,
+  },
+  category: {
+    type: String,
+    required: false,
   },
 
-  img: {
+  image: {
     type: String,
     required: false,
     default: "https://picsum.photos/1920",
@@ -33,7 +37,7 @@ const productSchema = new mongoose.Schema({
   },
   date: {
     type: Date,
-    required: true,
+    required: false,
     default: Date.now,
   },
 });
