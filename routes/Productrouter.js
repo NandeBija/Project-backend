@@ -7,6 +7,7 @@ const jwt = require("jsonwebtoken");
 const authenticate = require("../middleware/authenticate");
 const find = require("../middleware/find");
 const { getProduct } = require("../middleware/find");
+const authenticateToken = require("../middleware/authenticate");
 
 const router = express.Router();
 let product;
@@ -28,14 +29,15 @@ router.get("/:id", getProduct, async (req, res, next) => {
 
 // CREATE a product
 router.post("/", async (req, res, next) => {
-  const { name, image, price, author, about } = req.body;
+  const { name, about, author, category, image, price } = req.body;
 
   const product = new Product({
     name,
+    about,
+    author,
+    category,
     image,
     price,
-    author,
-    about,
   });
 
   try {

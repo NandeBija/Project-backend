@@ -6,24 +6,26 @@ POST http://localhost:2080/users
 Content-Type: application/json
 
 {
-    "name":"seJAMMYth",
-    "email":"JAMMY@gmail.com",
-    "contact":"JAMMY6",
-    "password":"JAM"
+    "name":"Simthembile",
+    "email":"Simthembile@gmail.com",
+    "contact":"01234",
+    "password":"12345"
 }
 ###
-PATCH  http://localhost:2080/users/login 
+PATCH http://localhost:2080/users/login 
 Content-Type: application/json
 
 {
-    "email":"NANDE@gmail.com",
-    "password":"IDK"
+    "email":"Simthembile@gmail.com",
+    "password":"12345"
 }
 
 
 ###
-DELETE http://localhost:2080/users/621cabfe5346cfe308947f37
+DELETE http://localhost:2080/users/6218c563a4f72f06cbe03f3d
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI2MjE4ZDhjNDIxNDhhNTYyYzA1YzY0NGUiLCJuYW1lIjoiTkFOREUiLCJlbWFpbCI6Ik5BTkRFQGdtYWlsLmNvbSIsImNvbnRhY3QiOiIwODI0NzI1MzYiLCJwYXNzd29yZCI6IiQyYiQxMCRnUy5OeVZ1TjhFbGRNcUxjTDd2Z0N1WjlKb2ZNcDJKR3hKWWpjcWRKa1ZhZ3hjeEtOUzdNaSIsImF2YXRhciI6bnVsbCwiYWJvdXQiOm51bGwsImpvaW5EYXRlIjoiMjAyMi0wMi0yNVQxMzoyNToyNC4zNDVaIiwiX192IjowfQ.11wfKMMu-oOLMWy6YoEqD0V8DOZpnit7Y8zvPio710s
+eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiU2ltdGhlbWJpbGUiLCJlbWFpbCI6IlNpbXRoZW1iaWxlQGdtYWlsLmNvbSIsImNvbnRhY3QiOiIwMTIzNCIsInBhc3N3b3JkIjoiJDJiJDEwJHI1T3BzVDc5OXNSWURWZERQZE1NMU9EQThvNXVUT0ZSUVJVRlp0Qm5Ud3FBYi5GZjg5WHlDIiwiYXZhdGFyIjpudWxsLCJhYm91dCI6bnVsbCwiX2lkIjoiNjIyMGIwYzA5NGE1NzMzYmJmYmMwOWYxIiwiam9pbkRhdGUiOiIyMDIyLTAzLTAzVDEyOjEyOjQ4LjgzNVoiLCJfX3YiOjB9.ZrhnPvQvt3U5LIPpUYm0j9wtHWZm7syVf5AwU_TzPzI
 
 ###
 GET http://localhost:2080/products
@@ -44,19 +46,25 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI2MjE4ZDhjNDIxNDhhNTYyYzA1Y
 }
 
 ###
-PUT http://localhost:2080/products/621c99d334f57c700771098f
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI2MjE4ZDhjNDIxNDhhNTYyYzA1YzY0NGUiLCJuYW1lIjoiTkFOREUiLCJlbWFpbCI6Ik5BTkRFQGdtYWlsLmNvbSIsImNvbnRhY3QiOiIwODI0NzI1MzYiLCJwYXNzd29yZCI6IiQyYiQxMCRnUy5OeVZ1TjhFbGRNcUxjTDd2Z0N1WjlKb2ZNcDJKR3hKWWpjcWRKa1ZhZ3hjeEtOUzdNaSIsImF2YXRhciI6bnVsbCwiYWJvdXQiOm51bGwsImpvaW5EYXRlIjoiMjAyMi0wMi0yNVQxMzoyNToyNC4zNDVaIiwiX192IjowfQ.11wfKMMu-oOLMWy6YoEqD0V8DOZpnit7Y8zvPio710s
+POST http://localhost:2080/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiU2ltdGhlbWJpbGUiLCJlbWFpbCI6IlNpbXRoZW1iaWxlQGdtYWlsLmNvbSIsImNvbnRhY3QiOiIwMTIzNCIsInBhc3N3b3JkIjoiJDJiJDEwJHI1T3BzVDc5OXNSWURWZERQZE1NMU9EQThvNXVUT0ZSUVJVRlp0Qm5Ud3FBYi5GZjg5WHlDIiwiYXZhdGFyIjpudWxsLCJhYm91dCI6bnVsbCwiX2lkIjoiNjIyMGIwYzA5NGE1NzMzYmJmYmMwOWYxIiwiam9pbkRhdGUiOiIyMDIyLTAzLTAzVDEyOjEyOjQ4LjgzNVoiLCJfX3YiOjB9.ZrhnPvQvt3U5LIPpUYm0j9wtHWZm7syVf5AwU_TzPzI
 
 {
-    "name":"PUMA",
-    "image":"img url",
-    "price":"R300",
+    "name":"PUMA", 
     "about":"haha pants",
-    "author": "Nande"
+    "author": "Nande",
+    "category":"pants",
+    "image":"img url",
+    "price":300,
+   
+    
 }
+###
+GET http://localhost:2080/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI2MjE4ZDhjNDIxNDhhNTYyYzA1YzY0NGUiLCJuYW1lIjoiTkFOREUiLCJlbWFpbCI6Ik5BTkRFQGdtYWlsLmNvbSIsImNvbnRhY3QiOiIwODI0NzI1MzYiLCJwYXNzd29yZCI6IiQyYiQxMCRnUy5OeVZ1TjhFbGRNcUxjTDd2Z0N1WjlKb2ZNcDJKR3hKWWpjcWRKa1ZhZ3hjeEtOUzdNaSIsImF2YXRhciI6bnVsbCwiYWJvdXQiOm51bGwsImpvaW5EYXRlIjoiMjAyMi0wMi0yNVQxMzoyNToyNC4zNDVaIiwiX192IjowfQ.11wfKMMu-oOLMWy6YoEqD0V8DOZpnit7Y8zvPio710s
 
 ###
-DELETE http://localhost:2080/products/621c923d488fb8510ae3b036
+DELETE http://localhost:2080/products/621c95af8a82266290190d91
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI2MjE4ZDhjNDIxNDhhNTYyYzA1YzY0NGUiLCJuYW1lIjoiTkFOREUiLCJlbWFpbCI6Ik5BTkRFQGdtYWlsLmNvbSIsImNvbnRhY3QiOiIwODI0NzI1MzYiLCJwYXNzd29yZCI6IiQyYiQxMCRnUy5OeVZ1TjhFbGRNcUxjTDd2Z0N1WjlKb2ZNcDJKR3hKWWpjcWRKa1ZhZ3hjeEtOUzdNaSIsImF2YXRhciI6bnVsbCwiYWJvdXQiOm51bGwsImpvaW5EYXRlIjoiMjAyMi0wMi0yNVQxMzoyNToyNC4zNDVaIiwiX192IjowfQ.11wfKMMu-oOLMWy6YoEqD0V8DOZpnit7Y8zvPio710s
 # {

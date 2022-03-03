@@ -157,36 +157,5 @@ router.post("/cart", async (req, res) => {
   res.send("Product added to cart");
 });
 
-//POST PRODUCT TO USER CART
-// router.post("/:id/cart", [authenticate, getProduct],async (req, res, next) => {
-//   console.log('We here now')
-//   console.log(req.user)
-//   // const user = await User.findById(req.user._id);
-
-//   console.log(user)
-//   let product_id = res.product._id;
-//   let name = res.product.name;
-//   let about = res.product.about;
-//   let author = res.product.author;
-//   let img = res.product.img;
-//   let price = res.product.price;
-//   let created_by = req.user._id;
-
-//   try {
-//     user.cart.push({
-//       product_id,
-//       name,
-//       about,
-//       author,
-//       img,
-//       price,
-//       created_by,
-//     });
-//     const updatedUser = await user.save();
-//     res.status(201).json(updatedUser.cart);
-//   } catch (error) {
-//     res.status(500).json(console.log(error));
-//   }
-// });
 
 module.exports = router;
