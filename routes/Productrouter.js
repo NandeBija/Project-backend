@@ -29,11 +29,11 @@ router.get("/:id", getProduct, async (req, res, next) => {
 
 // CREATE a product
 router.post("/", async (req, res, next) => {
-  const { name, about, author, category, image, price } = req.body;
+  const { name, author, category, image, price } = req.body;
 
   const product = new Product({
     name,
-    about,
+
     author,
     category,
     image,
@@ -54,10 +54,10 @@ router.put("/:id", getProduct, async (req, res, next) => {
     res.status(400).json({
       message: "You do not have the permission to update this product",
     });
-  const { name, price, about, image, author } = req.body;
+  const { name, price, image, author } = req.body;
   if (name) res.product.name = name;
   if (price) res.product.price = price;
-  if (about) res.product.about = about;
+
   if (image) res.product.image = image;
   if (author) res.product.image = author;
 
