@@ -6,11 +6,7 @@ const Cart = require("../models/cart");
 const Product = require("../models/product");
 const router = express.Router();
 
-// GET ITEMS IN CART
 
-// router.get("/cart", getCart, (req, res, next) => {
-//   return res.send('wat');
-//   });
 
 //   UPDATE CART
 // router.put('/', [authenticateToken, getPost], async (req, res)=>{
@@ -91,7 +87,7 @@ router.get('/', (req,res)=>{
   
 })
 
-
+// POST TO CART.. LAST TRY
 router.post("/cart", async (req, res) => {
   const { productId, quantity, name, price, about, image } = req.body;
 

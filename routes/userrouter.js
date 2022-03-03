@@ -115,7 +115,7 @@ router.patch("/login", async (req, res, next) => {
   }
 });
 
-//POST ITEM IN CART
+//POST PRODUCTS IN CART
 
 router.post("/cart", async (req, res) => {
   const { productId, quantity, name, price, about, image } = req.body;
